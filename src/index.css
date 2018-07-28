@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.search-bar{
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 75%;
+}
+
+.video-item img {
+  max-width: 100px;
+}
+
+.video-detail .details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.fa-search {
+  position: sticky;
+  cursor: text;
+}
+
+.glyphicon { margin-right:5px; }
+
+.item {
+  transition: background-color 0.3s;
+  margin-bottom: 30px;
+}
+
+.item:hover, button:hover, button.active {
+  background-color: #e5e5e5;
+}
+
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.item.list-group-item .list-group-image {
+  margin-right: 10px;
+}
+
+.item.list-group-item .thumbnail {
+  margin-bottom: 0px;
+}
+
+.item.list-group-item .caption {
+  padding: 9px 9px 0px 9px;
+}
+
+.item.list-group-item:before, .item.list-group-item:after {
+  display: table;
+  content: " ";
+}
+
+.item.list-group-item img {
+  float: left;
+}
+
+.item.list-group-item:after {
+  clear: both;
+}
+
+.list-group-item-text {
+  margin: 0 0 11px;
+}
+
+button {
+  margin: 10px;
+  background-color: white;
+}
+
+.lds-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fcf;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fcf transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.closeButton {
+  float: right;
+  cursor: pointer;
+}
