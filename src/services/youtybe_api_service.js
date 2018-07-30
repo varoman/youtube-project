@@ -5,12 +5,13 @@ const ITEMS_PER_PAGE = 10;
 
 export default class YoutubeApiService {
 
-    makeSearch = (term) => {
+    makeSearch = (term, pageToken = '') => {
         const options = {
             q: term,
             type: 'video',
             part: 'snippet',
-            maxResults: ITEMS_PER_PAGE
+            maxResults: ITEMS_PER_PAGE,
+            pageToken
         };
         return youtubeSearch(API_KEY, options);
     }

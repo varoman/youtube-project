@@ -1,11 +1,13 @@
 import YoutubeApiService from '../services/youtybe_api_service';
 
 const youtubeApiService = new YoutubeApiService();
+let term;
 
-export function updateSearch(searchTerm) {
-     return {
+export function updateSearch(searchTerm, pageToken) {
+    if (searchTerm) term = searchTerm;
+    return {
         type: 'SEARCH_UPDATE',
-        payload: youtubeApiService.makeSearch(searchTerm)
+        payload: youtubeApiService.makeSearch(term, pageToken)
     };
 }
 
