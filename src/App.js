@@ -8,11 +8,11 @@ import ErrorBoundary from './components/error_boundaries';
 const App = () => {
     return (
         <div>
+            <SearchBar/>
             <ErrorBoundary>
-                <SearchBar/>
                 <VideoList/>
-                <VideoPlayerModal/>
             </ErrorBoundary>
+            <VideoPlayerModal/>
         </div>
     );
 };

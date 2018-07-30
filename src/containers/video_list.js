@@ -9,12 +9,12 @@ class VideoList extends Component {
 
     componentDidMount() {
         // get initial video list when component first loaded by triggering an action
-        this.props.updateSearch('coldplay');
+        this.props.updateSearch('pink floyd');
     }
 
     render() {
         // because of async task we should handle the state when the 'videos' key
-        // does not exist on props object
+        // does not exist on props object, and show a loading bar
         if (!this.props.videos) return <div className="lds-ring"><div></div><div></div><div></div><div></div></div>;
         if (!this.props.videos.length) return <div>No results!</div>
         return(

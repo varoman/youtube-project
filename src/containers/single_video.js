@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import { selectVideo } from '../actions';
 import { bindActionCreators } from 'redux';
+import { selectVideo } from '../actions';
+import {connect} from 'react-redux';
 
 class SingleVideo extends Component {
 
@@ -25,7 +25,6 @@ class SingleVideo extends Component {
                     </div>
                 </div>
             </div>
-
         );
     }
 }

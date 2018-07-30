@@ -31,14 +31,16 @@ class VideoPlayerModal extends Component {
 
     render() {
         if (!this.props.selectedVideo) return <span></span>;
-        const videoSrc = `https://www.youtube.com/embed/${this.props.selectedVideo.id.videoId}?autoplay=1`;        return (
+        const videoSrc = `https://www.youtube.com/embed/${this.props.selectedVideo.id.videoId}?autoplay=1`;
+        return (
             <div>
                 <Modal isOpen={this.state.modalIsOpen}
                        style={customStyles}
                        onRequestClose={this.closeModal}
                        contentLabel="Example Modal">
                     <div className="closeButton"
-                         onClick={this.closeModal}><i className="fas fa-times"></i></div>
+                         onClick={this.closeModal}><i className="fas fa-times"></i>
+                    </div>
                     <div className="video-details col-md-12">
                         <div className="embed-responsive embed-responsive-16by9">
                             <iframe className="embed-responsive-item"
